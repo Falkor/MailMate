@@ -1,3 +1,5 @@
+// -*- mode: c; -*-
+
 {
 	// derived from: http://mail.google.com/support/bin/answer.py?answer=6594
 	// Se also http://jeremy.cowgar.com/2014/09/22/my-mailmate-keybindings/
@@ -65,8 +67,10 @@
 	"u"	 = "toggleReadState:"; // FIXME: Should be "markAsUnRead:"
 	"^a" = "selectAll:";
 	"m"	 = "moveToMailbox:";
-	"C"   = "showCorrespondence:";
-		
+	"C"  = "showCorrespondence:";
+	"D"  = "saveAttachmentsInDownloads:";
+
+
 	"^s"	= "saveDocument:";
 
 	"z"	= "undo:";
