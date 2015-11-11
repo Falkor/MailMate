@@ -1,0 +1,136 @@
+{
+	// derived from: http://mail.google.com/support/bin/answer.py?answer=6594
+	// Se also http://jeremy.cowgar.com/2014/09/22/my-mailmate-keybindings/
+	// Smart mailbox "Has Answer": http://jeremy.cowgar.com/2014/09/18/mailmate-waiting-on-reply/
+
+	// Reference: http://manual.mailmate-app.com/key_binding_selectors
+
+    /*
+	 * |         Keybindings           |
+	 * | Shortcut | Code | Description |
+	 * | -------- | ---- | ----------- |
+	 * | a        | a    | -           |
+	 * | ⌃ a      | ^a   | Control-a   |
+	 * | ⌥ a      | ~a   | Option-a    |
+	 * | ⇧ a      | A    | Shift-a     |
+	 * | ⌘ a      | @a   | Command-a   |
+	 */
+
+	// Sending Message
+	"@\U000A" = "send:"; // ⌘+return
+	"@\U000D" = "send:"; // ⌘+enter
+	//"~@\U000A" = ( "setTag:", "ExpectReply", "send"); // ⌃+⌘+enter
+	//"~@\U000D" = ( "setTag:", "ExpectReply", "send"); // ⌃+⌘+return
+	//"@\U007F"  = ( "setTag:", "Delegated", "sendAndMoveParentToMailbox:", "/Delegated" ); //⌘+⌫ (backspace) send and move to Delegated mailbox with the Delegated tag
+
+	// Email Creation
+	"c"	= "newMessage:";   // compose
+	"r"	= ( "reply:", "insertFormatString:",      "\nDear ${to.name.first},\n\n"); /* Smart reply */
+	"R"	= ("replySender:", "insertFormatString:", "\nDear ${to.name.first},\n\n");
+	"a"	= ( "replyAll:",   "insertFormatString:", "\nDear ${to.name.first} & al.,\n\n"); 
+	"f"	= "forwardMessage:";
+	"F" = "forwardAsAttachment:";
+	"@)" = "increaseQuoteLevel:";
+    "@(" = "decreaseQuoteLevel:";
+	"^>" = "increaseQuoteLevel:";
+    "^<" = "decreaseQuoteLevel:";
+
+
+	// Search
+	"^/"	= "mailboxSearch:";
+	"/" 	= "searchAllMessages:";
+
+	// Navigation / View
+	"o"	= "openMessages:"; // Gmail: Also expands or collapses a message if you are in 'Conversation View.'
+	"e"	= ("expandThread:"); 
+	"E"	= "collapseThread:"; 
+ 	"G" = "selectLastMessageRow:"; // Select last message (use gg for the first one)
+	//"n"	= "nextMessage:";
+	//"p"	= "previousMessage:";
+	"n" = "nextThread:";
+	"p" = "previousThread:";
+	"l" = "lastOfThread:";  
+	"L" = "loadImagesOnce:"; // **L**oad remote images once
+	"i" = "loadImagesOnce:"; // load remote **I**mages once
+	
+	// Filtering
+	"j"	 = "moveToJunk:";
+	"J"  = ( "markAsNotJunk:", "moveToMailbox:", "INBOX");
+	"!"	 = "toggleFlag:";  // IMPORTANT/Urgent 
+	//"s"	 = "moveToJunk:"; // spam
+	"-"  = "toggleMuteState:";
+	"A"	 = "archive:";
+	"x"  = "deleteMessage:";
+	"X"  = ( "moveThreadToMailbox:", "trash" );
+	"u"	 = "toggleReadState:"; // FIXME: Should be "markAsUnRead:"
+	"^a" = "selectAll:";
+	"m"	 = "moveToMailbox:";
+	"C"   = "showCorrespondence:";
+		
+	"^s"	= "saveDocument:";
+
+	"z"	= "undo:";
+	"Z" = "redo";
+
+	// Combo keys - Go To... 
+	"g" = {
+		"g" = "selectFirstMessageRow:"; /* gg, like in Vim */
+		"a" = ( "goToMailbox:", "ALL_MESSAGES", "makeFirstResponder:", "mainOutline" );
+		"A" = ( "goToMailbox:", "ARCHIVE",      "makeFirstResponder:", "mainOutline" );
+		"d" = ( "goToMailbox:", "/Delegated",   "makeFirstResponder:", "mainOutline" );
+		"f" = ( "goToMailbox:", "FLAGGED",      "makeFirstResponder:", "mainOutline" );
+        "!" = ( "goToMailbox:", "FLAGGED",      "makeFirstResponder:", "mainOutline" );
+        //"j" = ( "goToMailbox:", "junk" ); // DOES NOT work for some reason...
+        // g then c	Go to 'Contacts'	Takes you to your Contacts list.
+		"d" = ( "goToMailbox:", "DRAFTS",       "makeFirstResponder:", "mainOutline" );
+		"l" = "goToMailbox:";   // List potential mailboxes to go to
+		"i" = ( "goToMailbox:", "INBOX",        "makeFirstResponder:", "mainOutline");
+		"s" = ( "goToMailbox:", "SENT",         "makeFirstResponder:", "mainOutline");
+
+		/* Obtain the UUID from  ~/Library/Application Support/MailMate/Mailboxes.plist */
+		"u" = ( "goToMailbox:", "5A92BA41-7399-4548-A3ED-3346A5B97BB1", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Unread. */
+		"e" = ( "goToMailbox:", "CD0132C9-2786-447D-8D1C-3F3811D446AE", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Expect a Reply. */
+		"s" = ( "goToMailbox:", "4F895CA7-7188-4434-A73A-4BE32764327B", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Sysadmins Alerts */
+		"j" = ( "goToMailbox:", "A3582AFC-7620-4DA0-ACAD-445FEDCAD4BA", "makeFirstResponder:", "mainOutline", "selectAll:"); /* Goto smart mailbox, Sysadmins Junk */
+		"v" = ( "goToMailbox:", "8EB2809E-B311-4A02-B676-A0226770EF83", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, VIPs*/
+		
+	};
+
+	// Combo Key -- Tags
+	"t" = {
+    	"e" = ( "toggleTag:", "ExpectReply" );
+    	"d" = ( "toggleTag:", "Delegated" );
+	};
+
+	// Combo key -- Select ....
+	"*" = {
+		"a" = "selectAll:";
+		"n" = "deselectAll:";
+		"r" = ( "selectWithFilter:", "#flags.flag = '\\Seen'"); // Selects all mail you've read.
+		"u" = ( "selectWithFilter:", "#flags.flag !=[x] '\\Seen'"); // Selects all unread mail.
+		"s" = ( "selectWithFilter:", "#flags.flag = '\\Flagged'"); // Selects all starred mail.
+		"t" = ( "selectWithFilter:", "#flags.flag !=[x] '\\Flagged'"); // Selects all unstarred mail.
+	};
+}
+
+/*
+Not included above:
+
+u	Return to conversation list	Refreshes your page and returns you to the inbox, or list of conversations.
+x	Select conversation	Automatically checks and selects a conversation so that you can archive, apply a label, or choose an action from the drop-down menu to apply to that conversation.
++	Mark as important	Helps Gmail learn what's important to you by marking misclassified messages. (Specific to Priority Inbox)
+-	Mark as unimportant	Helps Gmail learn what's not important to you by marking misclassified messages. (Specific to Priority Inbox)
+
+[	Archive and previous	Removes the current view's label from your conversation and moves to the previous one.
+]	Archive and next	Removes the current view's label from your conversation and moves to the next one.
+y	Remove from Current View* Automatically removes the message or conversation from your current view.
+ From 'Inbox,' 'y' means Archive
+ From 'Starred,' 'y' means Unstar
+ From 'Trash,' 'y' means Move to inbox
+ From any label, 'y' means Remove the label
+ * 'y' has no effect if you're in 'Spam,' 'Sent,' or 'All Mail.'
+.	Show more actions	Displays the 'More Actions' drop-down menu.
+
+y then o	Archive and next	Archives your conversation and moves to the next one.
+	
+*/
