@@ -1,12 +1,9 @@
 -*- mode: markdown; mode: visual-line; fill-column: 80 -*-
 
+[![Version](https://img.shields.io/github/tag/Falkor/mailmate.svg)](https://github.com/Falkor/MailMate)
 [![Licence](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html) [![Gittip](http://img.shields.io/gittip/Falkor.svg)](http://gittip.com/Falkor) ![By Falkor](https://img.shields.io/badge/by-Falkor-blue.svg)
 
-
-
-
-
-       Time-stamp: <Wed 2015-11-11 11:51 svarrette>
+       Time-stamp: <Wed 2015-11-11 22:43 svarrette>
 
          ______    _ _             _       __  __       _   __  __       _          _____             __
         |  ____|  | | |           ( )     |  \/  |     (_) |  \/  |     | |        / ____|           / _(_)
