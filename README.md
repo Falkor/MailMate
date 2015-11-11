@@ -18,7 +18,7 @@
                                                                                                            |___/ 
        Copyright (c) 2015 Sebastien Varrette <sebastien.varrette@uni.lu>
 
-Sebastien Varrette aka Falkor's MailMate Customizations and Settings
+Sebastien Varrette aka Falkor's [MailMate](http://mailmate-app.com) Customizations and Settings
 
 * [GPL-3.0 Licence](http://www.gnu.org/licenses/gpl-3.0.html) -- **does NOT** apply to the layout (see below)
 * [Github/Project Homepage](https://github.com/Falkor/MailMate)
