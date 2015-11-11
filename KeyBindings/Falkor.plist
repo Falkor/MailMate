@@ -27,9 +27,9 @@
 
 	// Email Creation
 	"c"	= "newMessage:";   // compose
-	"r"	= ( "reply:", "insertFormatString:",      "\nDear ${to.name.first},\n\n"); /* Smart reply */
+	"r"	= ( "reply:",      "insertFormatString:", "\nDear ${to.name.first},\n\n"); /* Smart reply */
 	"R"	= ("replySender:", "insertFormatString:", "\nDear ${to.name.first},\n\n");
-	"a"	= ( "replyAll:",   "insertFormatString:", "\nDear ${to.name.first} & al.,\n\n"); 
+	"a"	= ( "replyAll:",   "insertFormatString:", "\nDear ${to.name.first},\n\n");
 	"f"	= "forwardMessage:";
 	"F" = "forwardAsAttachment:";
 	"@)" = "increaseQuoteLevel:";
@@ -86,7 +86,7 @@
         "!" = ( "goToMailbox:", "FLAGGED",      "makeFirstResponder:", "mainOutline" );
         //"j" = ( "goToMailbox:", "junk" ); // DOES NOT work for some reason...
         // g then c	Go to 'Contacts'	Takes you to your Contacts list.
-		"d" = ( "goToMailbox:", "DRAFTS",       "makeFirstResponder:", "mainOutline" );
+		"D" = ( "goToMailbox:", "DRAFTS",       "makeFirstResponder:", "mainOutline" );
 		"l" = "goToMailbox:";   // List potential mailboxes to go to
 		"i" = ( "goToMailbox:", "INBOX",        "makeFirstResponder:", "mainOutline");
 		"s" = ( "goToMailbox:", "SENT",         "makeFirstResponder:", "mainOutline");
@@ -95,7 +95,7 @@
 		"u" = ( "goToMailbox:", "5A92BA41-7399-4548-A3ED-3346A5B97BB1", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Unread. */
 		"e" = ( "goToMailbox:", "CD0132C9-2786-447D-8D1C-3F3811D446AE", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Expect a Reply. */
 		"s" = ( "goToMailbox:", "4F895CA7-7188-4434-A73A-4BE32764327B", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Sysadmins Alerts */
-		"j" = ( "goToMailbox:", "A3582AFC-7620-4DA0-ACAD-445FEDCAD4BA", "makeFirstResponder:", "mainOutline", "selectAll:"); /* Goto smart mailbox, Sysadmins Junk */
+		"j" = ( "goToMailbox:", "A3582AFC-7620-4DA0-ACAD-445FEDCAD4BA", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, Sysadmins Junk */
 		"v" = ( "goToMailbox:", "8EB2809E-B311-4A02-B676-A0226770EF83", "makeFirstResponder:", "mainOutline"); /* Goto smart mailbox, VIPs*/
 		
 	};
@@ -112,8 +112,9 @@
 		"n" = "deselectAll:";
 		"r" = ( "selectWithFilter:", "#flags.flag = '\\Seen'"); // Selects all mail you've read.
 		"u" = ( "selectWithFilter:", "#flags.flag !=[x] '\\Seen'"); // Selects all unread mail.
-		"s" = ( "selectWithFilter:", "#flags.flag = '\\Flagged'"); // Selects all starred mail.
-		"t" = ( "selectWithFilter:", "#flags.flag !=[x] '\\Flagged'"); // Selects all unstarred mail.
+		"f" = ( "selectWithFilter:", "#flags.flag = '\\Flagged'"); // Selects all starred mail.
+		"!" = ( "selectWithFilter:", "#flags.flag = '\\Flagged'"); // Selects all starred mail.
+		"F" = ( "selectWithFilter:", "#flags.flag !=[x] '\\Flagged'"); // Selects all unstarred mail.
 	};
 }
 
