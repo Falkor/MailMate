@@ -59,7 +59,7 @@
     "j"  = "moveToJunk:";
     "J"  = ( "markAsNotJunk:", "moveToMailbox:", "INBOX");
     "!"  = "toggleFlag:";  // IMPORTANT/Urgent
-    //"s"    = "moveToJunk:"; // spam
+    "s"    = "showThread:"; // Initiate search for messages in the same thread(s)
     "-"  = ("toggleReadState:", "toggleMuteState:" );
     "A"  = "archive:";
     "x"  = "deleteMessage:";
