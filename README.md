@@ -84,7 +84,7 @@ _**Note**_ You may need to create the `KeyBindings` folder if you don't already 
 
 | File                                     | Description                                                      |
 | :---                                     | :---                                                             |
-| [Falkor.plist](KeyBindings/Falkor.plist) | My personal key bindings [detailed here]((KeyBindings/README.md) |
+| [Falkor.plist](KeyBindings/Falkor.plist) | My personal key bindings [detailed here](KeyBindings/README.md) |
 |                                          |                                                                  |
 
 ## Installation
