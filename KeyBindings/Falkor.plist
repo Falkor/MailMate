@@ -27,9 +27,9 @@
 
     // Email Creation
     "c" = "newMessage:";   // compose
-    "r" = ("reply:",      "insertFormatString:", "\nDear ${to.name.first},\n\n"); /* Smart reply */
+    "r" = ("reply:",       "insertFormatString:", "\nDear ${to.name.first},\n\n"); /* Smart reply */
     "R" = ("replySender:", "insertFormatString:", "\nDear ${to.name.first},\n\n");
-    "a" = ("replyAll:",   "insertFormatString:", "\nDear ${to.name.first},\n\n");
+    "a" = ("replyAll:",    "insertFormatString:", "\nDear ${to.name.first},\n\n");
     "f" = "forwardMessage:";
     "F" = "forwardAsAttachment:";
     "@)" = "increaseQuoteLevel:";
@@ -60,7 +60,7 @@
     "J"  = ( "markAsNotJunk:", "moveToMailbox:", "INBOX");
     "!"  = "toggleFlag:";  // IMPORTANT/Urgent
     //"s"    = "moveToJunk:"; // spam
-    "-"  = "toggleMuteState:";
+    "-"  = ("toggleReadState:", "toggleMuteState:" );
     "A"  = "archive:";
     "x"  = "deleteMessage:";
     "X"  = ( "moveThreadToMailbox:", "trash" );
