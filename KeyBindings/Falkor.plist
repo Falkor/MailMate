@@ -29,7 +29,7 @@
     "c" = "newMessage:";   // compose
     "r" = ("reply:",       "insertFormatString:", "\nDear ${to.name.first},\n\n"); /* Smart reply */
     "R" = ("replySender:", "insertFormatString:", "\nDear ${to.name.first},\n\n");
-    "A" = ("replyAll:",    "insertFormatString:", "\nDear ${to.name.first},\n\n");
+    "a" = ("replyAll:",    "insertFormatString:", "\nDear ${to.name.first},\n\n");
     "f" = "forwardMessage:";
     "F" = "forwardAsAttachment:";
     "@)" = "increaseQuoteLevel:";
@@ -61,7 +61,7 @@
     "!"  = "toggleFlag:";  // IMPORTANT/Urgent
     "s"    = "showThread:"; // Initiate search for messages in the same thread(s)
     "-"  = "toggleMuteState:" ;
-    "a"  = "archive:";
+    "&"  = "archive:";
     "x"  = "deleteMessage:";
     "X"  = ( "moveThreadToMailbox:", "trash" );
     "u"  = "toggleReadState:"; // FIXME: Should be "markAsUnRead:"
