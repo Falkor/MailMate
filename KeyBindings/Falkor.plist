@@ -19,8 +19,8 @@
      */
 
     // Sending Message
-    "@\U000A" = "send:"; // ⌘+return
-    "@\U000D" = "send:"; // ⌘+enter
+    "@\U000A" = "sendAndArchiveParent:"; // ⌘+return
+    "@\U000D" = "sendAndArchiveParent:"; // ⌘+enter
     //"~@\U000A" = ( "setTag:", "ExpectReply", "send"); // ⌃+⌘+enter
     //"~@\U000D" = ( "setTag:", "ExpectReply", "send"); // ⌃+⌘+return
     //"@\U007F"  = ( "setTag:", "Delegated", "sendAndMoveParentToMailbox:", "/Delegated" ); //⌘+⌫ (backspace) send and move to Delegated mailbox with the Delegated tag
