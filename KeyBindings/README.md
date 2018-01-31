@@ -12,7 +12,7 @@ Copyright (c) 2015 [Sebastien Varrette](mailto:<Sebastien.Varrette@uni.lu>)
 * [List of Key Binding Selectors](http://manual.mailmate-app.com/key_binding_selectors)
 
 
-Once of the killing feature of [MailMate](http://mailmate-app.com) is the complete freedom left to configure [custom key bindings](http://manual.mailmate-app.com/custom_key_bindings).
+One of the killing feature of [MailMate](http://mailmate-app.com) is the complete freedom left to configure [custom key bindings](http://manual.mailmate-app.com/custom_key_bindings).
 You can configure the `Falkor` key-bindings by placing the file [`Falkor.plist`](Falkor.plist) in:
 
 ```sh
@@ -43,9 +43,9 @@ From the [reference documentation](http://manual.mailmate-app.com/custom_key_bin
 
 >In addition to the above, `$` can be used to bind to the shift key (`⇧`) for non-letter-keys and `#` can be used for the numeric key pad. Note that the order of multiple modifiers is important. It must be in this order: **`#^~$@`**
 
-You will also find elements demonstrating the usage of the `ExpectReply` tag. Actually, I follow the workflow proposed in [this blog post](http://jeremy.cowgar.com/2014/09/18/mailmate-waiting-on-reply/) with the definition of '`Expect a Reply`' / '`Has Answer`' Smart mailboxes. 
+You will also find elements demonstrating the usage of the `ExpectReply` tag. Actually, I follow the workflow proposed in [this blog post](http://jeremy.cowgar.com/2014/09/18/mailmate-waiting-on-reply/) with the definition of '`Expect a Reply`' / '`Has Answer`' Smart mailboxes.
 
-## General Actions 
+## General Actions
 
 | Shortcut | Action         | Description                                                      |
 | :------: | -------------- | ---------------------------------------------------------------- |
@@ -78,14 +78,14 @@ You will also find elements demonstrating the usage of the `ExpectReply` tag. Ac
 | ⌃ /      | Search in mailbox      | Advanced Search in the current mailbox  -- see [official doc](http://manual.mailmate-app.com/view#search) (⌃ ⌥ ⌘ f)    |
 |          |                        |                                                                                                                        |
 
-_**Note:**_ searching in all message allow you to benefit from the flexible [search specifications](http://manual.mailmate-app.com/view#search) available in [MailMate](http://mailmate-app.com). 
+_**Note:**_ searching in all message allow you to benefit from the flexible [search specifications](http://manual.mailmate-app.com/view#search) available in [MailMate](http://mailmate-app.com).
 For instance typing:
 
 ```txt
 foo f !smith t (smith or joe)
 ```
 
-is understood as 
+is understood as
 
 ```txt
 Message contains "foo" and From does not contain "smith" and (To contains "smith" or "joe")
@@ -156,7 +156,7 @@ Currently supported modifiers:
 
 ## Tags
 
-I bind the default shortcut to add tags to `⇧ t` in the `Tags ▸ Tags editor shortcut`, which let the `t` key able to initiate a combo on tags as follows: 
+I bind the default shortcut to add tags to `⇧ t` in the `Tags ▸ Tags editor shortcut`, which let the `t` key able to initiate a combo on tags as follows:
 
 | Shortcut | Action                  | Description                                    |
 | :------: | --------------          | ---------------------------------------------- |
